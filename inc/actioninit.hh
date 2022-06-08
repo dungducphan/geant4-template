@@ -3,10 +3,10 @@
 #include "generator.hh"
 #include "runaction.hh"
 
-class actionInit : public G4VUserActionInitialization {
+class actioninit : public G4VUserActionInitialization {
   public:
-    actionInit();
-    virtual ~actionInit();
+    actioninit();
+    virtual ~actioninit();
 
     virtual void Build() const;
     virtual void BuildForMaster() const;

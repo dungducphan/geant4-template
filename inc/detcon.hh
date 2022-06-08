@@ -27,10 +27,10 @@
 class G4VPhysicalVolume;
 class G4LogicalVolume;
 
-class detConstruction : public G4VUserDetectorConstruction {
+class detcon : public G4VUserDetectorConstruction {
   public:
-    detConstruction();
-    virtual ~detConstruction();
+    detcon();
+    virtual ~detcon();
 
     virtual G4VPhysicalVolume* Construct();
 };

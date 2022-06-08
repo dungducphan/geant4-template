@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-project(fission)
+set(CMAKE_CXX_STANDARD 17)
+
+project(vuv)
 
 find_package(Geant4 REQUIRED ui_all vis_all multithreaded)
 find_package(ROOT REQUIRED Core)
@@ -17,6 +19,6 @@ file(COPY ${MACROS} DESTINATION ${PROJECT_BINARY_DIR})
 file(COPY ${EXT_DATA} DESTINATION ${PROJECT_BINARY_DIR})
 
 include_directories(${PROJECT_SOURCE_DIR}/inc)
-add_executable(fission sim.cc ${sources} ${headers})
-target_link_libraries(fission ${Geant4_LIBRARIES})
-target_link_libraries(fission ${ROOT_LIBRARIES})
+add_executable(vuv sim.cc ${sources} ${headers})
+target_link_libraries(vuv ${Geant4_LIBRARIES})
+target_link_libraries(vuv ${ROOT_LIBRARIES})

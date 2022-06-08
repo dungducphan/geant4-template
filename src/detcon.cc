@@ -1,10 +1,10 @@
-#include "detConstruction.hh"
+#include "detcon.hh"
 
-detConstruction::detConstruction() : G4VUserDetectorConstruction() {}
+detcon::detcon() : G4VUserDetectorConstruction() {}
 
-detConstruction::~detConstruction() {}
+detcon::~detcon() {}
 
-G4VPhysicalVolume* detConstruction::Construct() {
+G4VPhysicalVolume* detcon::Construct() {
   G4NistManager* nist = G4NistManager::Instance();
   G4bool checkOverlaps = true;
 

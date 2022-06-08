@@ -1,5 +1,5 @@
-#include "detConstruction.hh"
-#include "actionInit.hh"
+#include "detcon.hh"
+#include "actioninit.hh"
 
 #ifdef G4MULTITHREADED
 #include "G4MTRunManager.hh"
@@ -29,9 +29,9 @@ int main(int argc, char** argv) {
   G4RunManager* runManager = new G4RunManager();
 #endif
 
-  runManager->SetUserInitialization(new detConstruction());
+  runManager->SetUserInitialization(new detcon());
   runManager->SetUserInitialization(new Shielding());
-  runManager->SetUserInitialization(new actionInit());
+  runManager->SetUserInitialization(new actioninit());
 
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
